@@ -4,9 +4,13 @@ import java.util.Random;
 
 public abstract class Noise {
     protected final Permutations permutations;
+    protected final double scale;
+    protected final int bound;
 
-    public Noise(Random random) {
-        this.permutations = new Permutations(8, random);  // FIXME(number of permutations probably shouldn't be a constant)
+    public Noise(Random random, double scale, int bound) {
+        this.permutations = new Permutations(bound, random);
+        this.scale = scale;
+        this.bound = bound - 1;
     }
 
     public abstract double noise(double x, double y);

@@ -6,8 +6,8 @@ public class Permutations {
     private final int[] permutations;
     private final int bound;
     
-    public Permutations(int powerOf2, Random random) {
-        this.permutations = createPermutations(1 << powerOf2, random);
+    public Permutations(int bound, Random random) {
+        this.permutations = createPermutations(bound, random);
         this.bound = this.permutations.length - 1;
     }
     
