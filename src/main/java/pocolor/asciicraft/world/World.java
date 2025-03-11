@@ -3,6 +3,7 @@ package pocolor.asciicraft.world;
 import pocolor.asciicraft.player.Player;
 
 import java.io.Serializable;
+import java.util.Random;
 
 public class World implements Serializable {
     public static final int RENDER_DISTANCE = 5;  // in chunks
@@ -14,6 +15,8 @@ public class World implements Serializable {
     public World(int seed) {
         this.seed = seed;
         this.player = new Player();
-        this.chunkMap = new ChunkMap();
+
+        Random random = new Random();
+        this.chunkMap = new ChunkMap(random.nextInt(4001) - 2000, random.nextInt(4001) - 2000);
     }
 }
