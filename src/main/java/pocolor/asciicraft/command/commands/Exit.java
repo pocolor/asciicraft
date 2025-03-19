@@ -4,7 +4,7 @@ import pocolor.asciicraft.command.Command;
 
 public class Exit extends Command {
     @Override
-    public int execute() {
+    public int execute(String... args) {
         return 0;
     }
 }

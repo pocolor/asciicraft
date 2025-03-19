@@ -1,4 +1,5 @@
 package pocolor.asciicraft.command;
 
-public class Alias {
+public class Aliases {
+
 }
