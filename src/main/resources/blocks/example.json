@@ -1,0 +1,10 @@
+{
+  "name": "Name",
+  "efficientMiningTool": "shovel",
+  "mineDifficulty": 0,
+  "itemDropped": null,
+
+  "blockBehaviour": {
+
+  }
+}

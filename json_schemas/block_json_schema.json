@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Asciicraft Block Schema",
+  "type": "object",
+  "required": [
+    "name",
+    "efficientMiningTool",
+    "miningDifficulty",
+    "itemDropped",
+    "blockColor",
+    "decorationColor",
+    "decorationCharacter"
+  ],
+  "properties": {
+    "name": {
+      "description": "Name of the block",
+      "type": "string"
+    },
+    "efficientMiningTool": {
+      "description": "Type of tool this block is supposed to be mined by",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "pickaxe",
+        "axe",
+        "shovel",
+        "hoe",
+        null
+      ]
+    },
+    "miningDifficulty": {
+      "description": "Relative time to mine this block. -1 if it cannot be mined",
+      "type": "number",
+      "minimum": -1
+    },
+    "itemDropped": {
+      "description": "Item the block drops on destroyed.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "grass",
+        "cobblestone",
+        "dirt",
+        null
+      ]
+    },
+    "blockColor": {
+      "description": "The BG color of the block",
+      "type": "string",
+      "pattern": "#[\\dA-F]{6}"
+    },
+    "decorationColor": {
+      "description": "The FG color of the block (character)",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "#[\\dA-F]{6}"
+    },
+    "decorationCharacter": {
+      "description": "The FG character",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "\\S"
+    }
+  }
+}
